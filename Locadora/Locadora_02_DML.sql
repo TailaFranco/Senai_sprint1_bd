@@ -27,6 +27,14 @@ VALUES				('CNK-4343', 1)
 ,					('VJI-0987', 2)
 ;
 
-INSERT INTO Geral	(idEmpresa, idPessoa, idVeiculo, idMarca, idModelo, idPlaca)
-VALUES				(1,1,1,3,1,1)
+INSERT INTO DataInicio (Inicio)
+VALUES					('22/04/2020');
+
+INSERT INTO DataFim (Fim)
+VALUES					('22/05/2020');
+
+INSERT INTO Aluguel (idPessoa, idVeiculo, idDataInicio, idDataFim, Aluguel)
+VALUES				(    1   ,     1    ,      1      ,     1    , '1000')
+;
+
 ;

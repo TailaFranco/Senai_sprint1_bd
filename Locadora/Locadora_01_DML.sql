@@ -39,13 +39,23 @@ CREATE TABLE Placa
 	,Numero		VARCHAR(200) NOT NULL
 );
 
-CREATE TABLE Geral
+CREATE TABLE DataInicio
 (
-	idGeral		INT PRIMARY KEY IDENTITY
-	,idEmpresa	INT FOREIGN KEY REFERENCES Empresa (idEmpresa)
-	,idPessoa	INT FOREIGN KEY REFERENCES PessoaFisica (idPessoa)
-	,idVeiculo	INT FOREIGN KEY REFERENCES Veiculo (idVeiculo)
-	,idMarca	INT FOREIGN KEY REFERENCES Marca (idMarca)
-	,idModelo	INT FOREIGN KEY REFERENCES Modelo (idModelo)
-	,idPlaca	INT FOREIGN KEY REFERENCES Placa (idPlaca)
+	idDataInicio		INT PRIMARY KEY IDENTITY
+	,Inicio				VARCHAR(100) NOT NULL
+);
+CREATE TABLE DataFim
+(
+	idDataFim		INT PRIMARY KEY IDENTITY
+	,Fim				VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Aluguel
+(
+	idAluguel			INT PRIMARY KEY IDENTITY
+	,idPessoa			INT FOREIGN KEY REFERENCES PessoaFisica (idPessoa)
+	,idVeiculo			INT FOREIGN KEY REFERENCES Veiculo (idVeiculo)
+	,idDataInicio		INT FOREIGN KEY REFERENCES DataInicio(idDataInicio)
+	,idDataFim			INT FOREIGN KEY REFERENCES DataFim(idDataFim)
+	,Aluguel			VARCHAR(200) NOT NULL
 );
