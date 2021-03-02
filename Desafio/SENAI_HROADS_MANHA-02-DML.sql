@@ -21,7 +21,7 @@ VALUES ('Ataque')
 	  ,('Cura')
 	  ,('Magia');
 
-INSERT INTO Habilidade(idTipo, NomeHbilidade)
+INSERT INTO Habilidade(idTipo, NomeHabilidade)
 VALUES (1, 'Lança Mortal')
 	  ,(2, 'Escudo Supremo')
 	  ,(3, 'Recuperar Vida');
@@ -30,6 +30,7 @@ INSERT INTO ClasseHabilidade(idClasse, idHabilidade)
 VALUES (1,1)
 	  ,(2,2)
 	  ,(3,3);
+
 INSERT INTO ClasseHabilidade(idClasse, idHabilidade)
 VALUES (1,2)
 	  ,(2,3);

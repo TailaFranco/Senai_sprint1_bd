@@ -24,7 +24,7 @@ CREATE DATABASE Hroads;
  (
 	idHabilidade INT PRIMARY KEY IDENTITY
 	,idTipo INT FOREIGN KEY REFERENCES Tipo(idTipo)
-	,NomeHbilidade VARCHAR(100) NOT NULL
+	,NomeHabilidade VARCHAR(100) NOT NULL
  );
 EXEC sp_rename 'Habilidade.NomeHbilidade', 'NomeHabilidade', 'COLUMN';
 

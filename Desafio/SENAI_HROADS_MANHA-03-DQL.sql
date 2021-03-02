@@ -10,13 +10,17 @@ SELECT * FROM Classe;
 SELECT Classe.NomeClasse AS Classe FROM Classe;
 
 --9.	Selecionar todas as habilidades;
-SELECT * FROM Habilidade;
+SELECT Habilidade.idHabilidade AS ID, Habilidade.NomeHabilidade AS Habilidade FROM Habilidade;
 
 --10.	Realizar a contagem de quantas habilidades estão cadastradas;
 SELECT COUNT (*) AS Quantidade FROM Habilidade;
 
 --11.	Selecionar somente os id’s das habilidades classificando-os por ordem crescente;
 SELECT Habilidade.idHabilidade FROM Habilidade;
+
+--11.1 (Fora do escopo) Alterado para mostrar em ordem descrecente, já que crescente é padrão e contendo junto o nome da habilidade
+SELECT Habilidade.idHabilidade, Habilidade.NomeHabilidade AS Habilidade FROM Habilidade
+ORDER BY Habilidade.idHabilidade DESC;
 
 --12.	Selecionar todos os tipos de habilidades;
 SELECT Tipo.idTipo AS id,Tipo.NomeTipo AS Tipo FROM Tipo;
@@ -57,3 +61,11 @@ ON ClasseHabilidade.idClasse = Classe.idClasse
 FULL OUTER JOIN Habilidade
 ON ClasseHabilidade.idHabilidade = Habilidade.idHabilidade;
 
+--Fora do escopo
+--19 Selecionado somente personagens com suas respectivas habilidades
+SELECT Personagem.idPersonagem, Personagem.NomePersonagem AS Nome, Habilidade.NomeHabilidade AS Habilidade FROM Personagem
+INNER JOIN ClasseHabilidade
+ON Personagem.idClasse = ClasseHabilidade.idClasse
+INNER JOIN Habilidade
+ON ClasseHabilidade.idHabilidade = Habilidade.idHabilidade
+ORDER BY idPersonagem;
