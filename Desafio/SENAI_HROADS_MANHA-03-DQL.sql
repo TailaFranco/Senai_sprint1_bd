@@ -15,6 +15,9 @@ SELECT Habilidade.idHabilidade AS ID, Habilidade.NomeHabilidade AS Habilidade FR
 --10.	Realizar a contagem de quantas habilidades estão cadastradas;
 SELECT COUNT (*) AS Quantidade FROM Habilidade;
 
+--10.1 Contagem de quantas habilidades estão cadastradas levando em conta o numero de habilidades por personagem
+SELECT COUNT (*) AS Quantidade FROM ClasseHabilidade;
+
 --11.	Selecionar somente os id’s das habilidades classificando-os por ordem crescente;
 SELECT Habilidade.idHabilidade FROM Habilidade;
 

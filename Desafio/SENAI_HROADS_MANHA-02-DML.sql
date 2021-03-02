@@ -34,6 +34,10 @@ VALUES (1,1)
 INSERT INTO ClasseHabilidade(idClasse, idHabilidade)
 VALUES (1,2)
 	  ,(2,3);
+
+INSERT INTO ClasseHabilidade(idClasse, idHabilidade)
+VALUES (4,2)
+	  ,(5,1);
 	  
 /*SELECT * FROM ClasseHabilidade;
 DELETE FROM ClasseHabilidade;*/
